@@ -34,6 +34,7 @@ MOD_SUBDIR = drivers/hwmon
 obj-m	:= $(DRIVER).o
 
 MAKEFLAGS += --no-print-directory
+EXTRA_CFLAGS += $(CFLAGS_EXTRA) -fno-pie
 
 .PHONY: all install modules modules_install clean
 
